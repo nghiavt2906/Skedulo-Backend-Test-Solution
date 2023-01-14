@@ -73,6 +73,8 @@ verify "timezone"
 verify "test1"
 verify "test2"
 verify "test3"
+verify "test4"
+verify "test5"
 
 echo ""
 echo "Finished verifying"

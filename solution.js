@@ -46,8 +46,8 @@ var findNextEventIdx = function (events, stack) {
 var filePath = process.argv.slice(2)[0];
 var input = JSON.parse(fs_1["default"].readFileSync(filePath, "utf8"));
 var events = input.map(function (event) { return (__assign(__assign({}, event), { strStart: event.start, strFinish: event.finish, start: new Date(event.start), finish: new Date(event.finish) })); });
-var schedule = [];
 var stack = new stack_1["default"]();
+var schedule = [];
 while (events.length > 0 || !stack.isEmpty()) {
     var nextEventIdx = findNextEventIdx(events, stack);
     if (nextEventIdx >= 0) {

@@ -37,7 +37,7 @@ const findNextEventIdx = (events, stack) => {
 const filePath = process.argv.slice(2)[0];
 const input = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-let events = input.map((event) => ({
+const events = input.map((event) => ({
   ...event,
   strStart: event.start,
   strFinish: event.finish,
@@ -45,8 +45,8 @@ let events = input.map((event) => ({
   finish: new Date(event.finish),
 }));
 
+const stack = new Stack();
 let schedule = [];
-let stack = new Stack();
 
 while (events.length > 0 || !stack.isEmpty()) {
   const nextEventIdx = findNextEventIdx(events, stack);
