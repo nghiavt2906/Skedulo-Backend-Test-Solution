@@ -43,7 +43,7 @@ Since this is an optimization problem, I decided to use Greedy algorithm approac
 
 In order to ensure future maintainability:
 
-1. A good testing process is that it can detect high number of failed results as well as unknown cases that haven't included yet. So I came up with more test cases which have more complex timeline with more overlapping performances because The more test cases, the better.
+1. A good testing process is that it can detect high number of failed results as well as unknown cases that haven't included yet. So I came up with more test cases (in verifier folder) which have more complex timeline with more overlapping performances because the more test cases, the better.
 
 2. The current way of evaluating results produced from the program is not sustainable as mentioned above since there could be more optimal schedules that the program can produce. Let's say we have an input below:
 
@@ -64,7 +64,7 @@ In order to ensure future maintainability:
 ]
 ```
 
-The first visited performance could be from Soundgarden or Pearl Jam because they start at the same time with same priority. Thus,the optimal schedule could be as follow:
+The first visited performance could be from Soundgarden or Pearl Jam because they start at the same time with same priority. Thus, the optimal schedule could be as follow:
 
 ```json
 [
@@ -77,25 +77,23 @@ The first visited performance could be from Soundgarden or Pearl Jam because the
 ]
 ```
 
-or
+or:
 
 ```json
 [
   {
     "band": "Soundgarden",
     "start": "1993-05-25T02:00:00Z",
-    "finish": "1993-05-25T02:10:00Z",
-    "priority": 1
+    "finish": "1993-05-25T02:10:00Z"
   },
   {
     "band": "Pearl Jam",
     "start": "1993-05-25T02:10:00Z",
-    "finish": "1993-05-25T02:15:00Z",
-    "priority": 1
+    "finish": "1993-05-25T02:15:00Z"
   }
 ]
 ```
 
 **Alternative testing approach**
 
-Another approach to evaluate the program's results is to iterate through the optimal schedule produced by the program to check for every time period of visited performance if there is any performance that has higher priority within the start and finish range. If there is, then the schedule is not optimal, otherwise the schedule is optimal and test case is passed.
+Another approach to evaluate the program's results is to iterate through the optimal schedule produced by the program to check for every time period of visited performance if there is any performance that has higher priority within the start and finish range. If there is, then the schedule is not optimal, otherwise the schedule is optimal and the test case is passed.
