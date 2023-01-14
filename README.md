@@ -32,20 +32,20 @@ node solution.js test.json
 
 Since this is an optimization problem, I decided to use Greedy algorithm approach to solve the problem by choosing the best next performance with highest priority within a time duration. Additionally, stack data structure was used to track the order of visited performances so that it can trace back to the previous ones when current attended performance has ended.
 
-Programming Language used: Typescript/Javascript.
+    *Programming Language used: Typescript/Javascript.
 
 **General flow of the program algorithm**
 
 1. Start with an input list of `events`, both empty `schedule` array and tracking `stack`.
 2. If there is still any event in `events` and `stack` to process, then continue.
 3. Find the next event to jump to:
-   - If `stack` is not empty, then find if there is any overlapping event that has highest priority.
-   - Else find the closet event with highest priority.
+   - If `stack` is empty, then find the closest event with highest priority.
+   - Else find if there is any overlapping event that has higher priority.
 4. Check if any next event found:
    - If there is, then push the next event to `stack` and if there is a previous one in `stack` then cut it short and add it to `schedule`.
    - Else pop latest event from `stack` and add it to `schedule` if its finish time is still after the last one in `schedule`.
 5. Repeat steps 2, 3 and 4 until there is no more events to process.
-6. Write the optimal `schedule` to file.
+6. Write the optimal `schedule` to output file.
 
 ## Testing strategy
 
