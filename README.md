@@ -14,6 +14,12 @@ build.sh
 run.sh test.json
 ```
 
+or with Node:
+
+```
+node solution.js test.json
+```
+
 ## Some factors to consider
 
 1. A typical music festival has a limited list of acts to perform (around 5-10 bands a day). So I suppose that the size of any input would be fairly small which means the problem can be solved quite fast with a standard computer.
@@ -25,6 +31,8 @@ run.sh test.json
 ## Approach to produce optimal schedule
 
 Since this is an optimization problem, I decided to use Greedy algorithm approach to solve the problem by choosing the best next performance with highest priority within a time duration. Additionally, stack data structure was used to track the order of visited performances so that it can trace back to the previous ones when current attended performance has ended.
+
+Programming Language used: Typescript/Javascript.
 
 **General flow of the program algorithm**
 
