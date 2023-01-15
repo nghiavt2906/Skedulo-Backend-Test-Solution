@@ -102,6 +102,8 @@ or:
 ]
 ```
 
-**Alternative testing approach**
+**Alternative testing approaches**
 
-Another approach to evaluate the program's results is to iterate through the optimal schedule produced by the program to check for every time period of visited performance if there is any performance that has higher priority within the start and finish range. If there is, then the schedule is not optimal, otherwise the schedule is optimal and the test case is passed.
+1. For every test case input, we should have a set of expected outputs that cover all possible optimal schedules, so that if there is a case where it can have more than one answer, the testing script wouldn't mark the produced schedule as a failed result.
+
+2. Another way to evaluate the program is to iterate through the optimal schedule produced by the program to check for every time period of the visited performance if there is any performance that has higher priority within the start and finish range. If there is, then the schedule is not optimal, otherwise the schedule is optimal and the test case is passed.
