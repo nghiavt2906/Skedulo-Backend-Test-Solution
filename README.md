@@ -140,7 +140,7 @@ In order to ensure future maintainability:
 
 1. A good testing process is that it can detect high number of failed results as well as unknown cases that haven't included yet. So I came up with more test cases (in verifier folder) which have more complex timeline with more overlapping performances because the more test cases, the better.
 
-2. The current way of evaluating results produced from the program is not sustainable as mentioned above since there could be more optimal schedules that the program can produce. Let's say we have an input below:
+2. The current way of evaluating results produced from the program is not sustainable as mentioned above since there could be more than 2+ optimal schedules that the program can produce. Let's say we have an input below:
 
 ```json
 [
