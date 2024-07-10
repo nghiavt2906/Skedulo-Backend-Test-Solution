@@ -18,7 +18,7 @@ finish: DateTime
 priority: Integer 
 ```
 
-## Your Challenge 
+## The Challenge 
 
 Write a program for Sally that takes a list of Performance objects as input and produces Sally’s optimal schedule. 
 
