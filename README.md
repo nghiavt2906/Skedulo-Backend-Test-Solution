@@ -85,7 +85,8 @@ Output file (overlapping.optimal.json):
   } 
 ] 
 ```
-# Solution
+
+# The Solution
 ## How to run the program
 
 1. To build the program:
